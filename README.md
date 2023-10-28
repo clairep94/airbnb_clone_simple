@@ -1,4 +1,13 @@
-# MakersBnB Python Project
+# MakersBnB Python Project - Personal Extension
+
+This is my person extension project for the Makersbnb Python/Flask project, made on Makers Academy's Software Engineering bootcamp.
+
+This original group project primarily focused on our backend. For my extension, I wanted to practice using HTML and CSS to replicate a simplified version of the Airbnb UI.
+
+
+# Original Project README:
+
+[Link to group project](https://github.com/clairep94/makers_project_airbnb_clone)
 
 This is the first group project on Makers Academy's Software Engineering bootcamp.
 This is a barebones crud app for Airbnb, created over one week through TTD, OOP, and Agile practices (pair programming, Kanban boards, etc.).
@@ -42,7 +51,7 @@ ER Diagram for simple Makersbnb relational database:
 UI Mockups (provided in project brief):
 ![UI Mockup](./readme_images/MakersBnB_mockups.jpg)
 
-## Screenshot:
+## Group Project:
 
 MVP Screenshot on Friday -- MVP achieved. As a group we chose to concentrated on the test-driving backend elements to satisfy the headline specs.
 <br>TODO - personal extension project to recreate Airbnb UI to practice frontend.
