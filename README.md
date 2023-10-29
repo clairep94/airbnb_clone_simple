@@ -4,6 +4,16 @@ This is my person extension project for the Makersbnb Python/Flask project, made
 
 This original group project primarily focused on our backend. For my extension, I wanted to practice using HTML and CSS to replicate a simplified version of the Airbnb UI.
 
+# WIP Updates:
+
+![New Homepage](./readme_images/8487lo.gif)
+
+**29 October**
+
+- Adds new homepage with self-made 'makersbnb' logo and transition background. I aim to adhere as much as possible to the 2014 Airbnb rebrand. All background images are stock images. All subsequent page designs will follow suit.
+
+![New Homepage static](./readme_images/Screenshot%202023-10-29%20at%2016.53.53.png)
+
 
 # Original Project README:
 
