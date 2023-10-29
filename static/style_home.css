@@ -1,0 +1,151 @@
+body {
+    margin: 0px;
+    overflow: hidden;
+}
+
+/* BACKGROUND IMAGE SLIDES ======================================= */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: crossfadeBackground 25s infinite; /* Adjust duration as needed */
+    background-size: cover;
+    z-index: -1;
+}
+@keyframes crossfadeBackground {
+    0%, 100% {
+        background-image: url('/static/homepage_slideshow/makersbnb_bg6.jpg');
+        opacity: 1;
+    }
+    25% {
+        background-image: url('/static/homepage_slideshow/makersbnb_bg2.jpg');
+        opacity: 1;
+    }
+    50% {
+        background-image: url('/static/homepage_slideshow/makersbnb_bg4.jpg');
+        opacity: 1;
+    }
+    75% {
+        background-image: url('/static/homepage_slideshow/makersbnb_bg5.jpg');
+        opacity: 1;
+    }
+}
+
+/* HEADER ======================================================= */
+.header {
+    color: #fff; /* Text color for header */
+    padding: 30px 30px; /* Add padding for spacing */
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    position: relative;
+}
+
+/* CLICKABLE LOGOS */
+.logo {
+    float: left; /* Float the logo to the left */
+}
+.logo a {
+    margin-left: 5px
+}
+
+/* RIGHT LINKS */
+.right-links {
+    /* float: right; Float the right links to the right */
+    position: absolute; /* Set position to absolute */
+    right: 30px; /* Adjust as needed to control distance from the right edge */
+    top: 50%; /* Vertically align the links to the middle */
+    transform: translateY(-20%); /* Correct vertical alignment to the top */
+}
+
+.header .right-links a {
+    color: white;
+    text-decoration: none;
+    margin-right: 25px; /* Add right margin to create space between links */
+}
+.header .right-links a:last-child {
+    margin-right: 0; /* Remove the margin on the last link to avoid extra space */
+}
+
+.clear {
+    clear: both; /* Clear the float to prevent overlap */
+}
+
+
+
+
+/* EVERYTHING BELOW HEADER ================================================= */
+
+/* BODY CONTAINER */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+}
+
+/* SEARCH BOX ================================================= */
+.search-box {
+    grid-column: 1;
+    width: 65%;
+    background-color: #fff; 
+    border-radius: 5px; /* Rounded corners */
+    text-align: left;
+    padding: 30px; /* Add padding for spacing -- Why so much space on top of header text?*/
+    margin: auto; /* Center the search box horizontally and add margin for spacing */
+    margin-right: auto;
+    margin-top: 30px; /* Add space between div and header */
+}
+
+/* Style for the "Book unique homes and experiences" text */
+.search-box-title {
+    font-family: 'Arial Bold', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #3e3c3c; /* Text color for search box */
+}
+
+/* Form Fields Styles */
+.search_form_fields {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: left;
+}
+
+.search_form_fields p {
+    margin: 0;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    font-family: 'Arial Bold', sans-serif; /* Change the font to Arial */
+    font-weight: bold;
+    font-size: 16px;
+    color: #3e3c3c;
+}
+
+.search_form_fields label {
+    margin-right: 5px;
+}
+
+.search_form_fields input {
+    width: 150px; /* Adjust the width to make all input fields the same dimension */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-family: 'Arial', sans-serif; /* Change the font to Arial */
+    font-size: 14px;
+}
+
+.search_button {
+    background-color: #ff5a5f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+    font-family: 'Arial', sans-serif; /* Change the font to Arial */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; /* Add margin to separate the button from the input fields */
+}

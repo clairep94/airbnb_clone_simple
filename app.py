@@ -10,6 +10,21 @@ from datetime import datetime, timedelta
 # Create a new Flask app
 app = Flask(__name__)
 app.secret_key = "secret_key" ##CHANGE THIS
+app.static_url_path = '/static'
+
+
+
+
+# ========= UI TESTS ================== #
+@app.route('/home')
+def home():
+    return render_template('home.html')
+
+@app.route('/home2')
+def home2():
+    return render_template('home2.html')
+
+
 
 # ======== ABOUT ====================== #
 # About -- Project description
