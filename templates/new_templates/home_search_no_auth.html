@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Holiday Homes & Apartment Rentals - Makersbnb</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_home.css') }}">
+    <!-- LOGO FOR AIRBNB -->
+    <!-- CHANGE THIS TO MAKERSBNB -->
+    <link rel="icon" href="{{ url_for('static', filename='logos/airbnb-logo.ico') }}" type="image/x-icon"> 
+</head>
+<body>
+    <!-- BACKGROUND SLIDES -->
+    <div class="background-container">
+    </div>
+    <!-- END BACKGROUND SLIDES -->
+
+    <!-- HEADER - No authentication -->
+    <div class="header">
+        <div class="logo">
+            <a href="/"><img src="{{ url_for('static', filename='logos/makersbnb_full_white.png') }}" alt="Makersbnb Logo" style="width: auto; height: 50px;"></a>
+        </div>
+
+        <div class="links">
+            <a href="/">Sign Up</a>
+            <a href="/login">Login</a>
+            <a href="/about">About</a>
+        </div>
+        <div class="clear"></div> <!-- Clear the float to prevent overlapping -->
+    </div>
+    <!-- END HEADER - No authentication -->
+
+    <!-- =================== EVERYTHING BELOW HEADER ============================ -->
+
+    <!-- CONTAINER FOR PAGE BELOW THE HEADER -- splits page into 2 columns in grid. -->
+    <div class="container">
+
+        <!-- SEARCH BOX -- white div box for search -->
+        <div class="search-space-box">
+
+            <h1 class="search-space-box-header">Book unique homes and experiences.</h1>
+
+            <!-- TODO: GENERATE ERRORS: only for when checkout date is before checkin date. -->
+
+            <!-- SEARCH BOX FORM FIELDS -- TODO: Change available_from and available_to to check_in and check_out -->
+            <form class="search_space_form" action="/home2" method="post"></form>
+        
+                <div class="search-box-fields">
+                    <label for="city">WHERE</label>
+                    <input type="text" name="city" id="city" value="Anywhere">
+                </div>
+                <div class="search-box-fields">
+                    <label for="available_from">CHECK IN</label>
+                    <input type="date" name="available_from" id="available_from" min="{{ today }}" max="{{ next_year }}">
+                </div>
+                <div class="search-box-fields">
+                    <label for="available_from">CHECK OUT</label>
+                    <input type="date" name="available_to" id="available_to" min="{{ today }}" max="{{ next_year }}">
+                </div>
+                <div class="search-box-fields">
+                    <label for="guests">GUESTS</label>
+                    <input type="number" name="guests" id="guests" min="1" max="6" value="1">
+                </div>
+                <!-- SUBMIT BUTTON -->
+                <button type="submit" class="search_button">
+                    Search
+                </button>
+            </form>
+            <!-- END SEARCH BOX FORM FIELDS -->
+        
+        </div>
+        <!-- END SEARCH BOX -- white div box for search -->
+
+    </div>
+    <!-- CONTAINER FOR PAGE BELOW THE HEADER -- splits page into 2 columns in grid. -->
+
+
+
+</body>
+</html>

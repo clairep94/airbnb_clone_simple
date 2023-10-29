@@ -5,7 +5,7 @@ from lib.user_repository import UserRepository
 from lib.listing_repository import ListingRepository
 from lib.date_listing_repo import DateListingRepo
 from lib.request_repository import RequestRepository
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 # Create a new Flask app
 app = Flask(__name__)
@@ -16,13 +16,27 @@ app.static_url_path = '/static'
 
 
 # ========= UI TESTS ================== #
-@app.route('/home')
-def home():
-    return render_template('home.html')
 
-@app.route('/home2')
+@app.route('/home2', methods=['GET']) #searchable homepage, no authentication -- to replace "/"
 def home2():
-    return render_template('home2.html')
+    today = datetime.now()
+    today_date_string = today.strftime('%Y-%m-%d')
+    print(today_date_string)
+    next_year = today + timedelta(days=365)
+    next_year_string = next_year.strftime('%Y-%m-%d')
+    
+    return render_template('new_templates/home_search_no_auth.html', today=today_date_string, next_year=next_year_string)
+
+@app.route('/home2', methods=['POST']) #searchable homepage, no authentication -- to replace "/"
+def home2_post():
+    connection = get_flask_database_connection(app)
+
+    today = datetime.now()
+    today_date_string = today.strftime('%Y-%m-%d')
+    print(today_date_string)
+    
+    return today_date_string
+
 
 
 

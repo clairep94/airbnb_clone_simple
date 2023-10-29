@@ -3,7 +3,7 @@ body {
     overflow: hidden;
 }
 
-/* BACKGROUND IMAGE SLIDES ======================================= */
+/* =========== BACKGROUND IMAGE SLIDES ======================================= */
 .background-container {
     position: fixed;
     top: 0;
@@ -33,39 +33,37 @@ body {
     }
 }
 
-/* HEADER ======================================================= */
+/* =========== HEADER ======================================================= */
 .header {
     color: #fff; /* Text color for header */
     padding: 30px 30px; /* Add padding for spacing */
-    font-family: 'Arial', sans-serif;
-    font-weight: bold;
-    font-size: 18px;
     position: relative;
 }
 
-/* CLICKABLE LOGOS */
+/* CLICKABLE LOGO */
 .logo {
     float: left; /* Float the logo to the left */
-}
-.logo a {
     margin-left: 5px
 }
 
 /* RIGHT HAND SIDE LINKS */
 .links {
-    /* float: right; Float the right links to the right */
     position: absolute; /* Set position to absolute */
-    right: 30px; /* Adjust as needed to control distance from the right edge */
-    top: 50%; /* Vertically align the links to the middle */
-    transform: translateY(-30%); /* Correct vertical alignment to the top */
+    right: 35px; /* Distance from the right edge */
+    top: 50%; /* Align links to vertical center of header */
+    transform: translateY(-30%); /* Adjusts links vertically to be bottom in-line with "makersbnb" */
 }
 
-.header .right-links a {
+.header .links a {
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
     color: white;
     text-decoration: none;
     margin-right: 25px; /* Add right margin to create space between links */
 }
-.header .right-links a:last-child {
+
+.header .links a:last-child {
     margin-right: 0; /* Remove the margin on the last link to avoid extra space */
 }
 
@@ -74,9 +72,7 @@ body {
 }
 
 
-
-
-/* EVERYTHING BELOW HEADER ================================================= */
+/* =========== EVERYTHING BELOW HEADER ================================================= */
 
 /* BODY CONTAINER -- This splits the bottom portion of the page into 2 columns */
 .container {
@@ -86,57 +82,52 @@ body {
 }
 
 /* SEARCH BOX ================================================= */
-.search-box {
-    grid-column: 1;
+.search-space-box {
+    grid-column: 1; /* Indicate that it's on the left column */
     width: 65%; /* Div box is 65% of half of viewpoint width */
     background-color: #fff; 
     border-radius: 5px; /* Rounded corners */
-    text-align: left;
-    padding: 30px; /* Add padding for spacing -- Why so much space on top of header text?*/
+    /* text-align: left; */
+    padding: 35px; /* Add padding for spacing -- Why so much space on top of header text?*/
+    padding-top: 10px; /* Gets rid of weird top spacing from padding=30px */
     margin: auto; /* Center the search box horizontally and add margin for spacing */
     margin-right: auto;
     margin-top: 30px; /* Space between search box div and header */
 }
 
 /* Style for the "Book unique homes and experiences" text */
-.search-box-title {
+.search-space-box-header {
     font-family: 'Arial', sans-serif;
     font-size: 40px;
-    letter-spacing: 1px;
+    letter-spacing: 0.9px;
     line-height: 1.2;
     color: #3e3c3c;
+    margin-top: 23px;
+    margin-bottom: 15px;
 }
 
-/* Form Fields Styles */
-/* .search_form_fields {
+.search-box-fields {
     display: grid;
-    flex-wrap: wrap;
-    justify-content: left;
-} */
-
-/* .search_form_fields label {
-    margin-right: 0px;
-} */
-
-.search_form_fields p {
-    margin: 0px;
-    padding: 0px;
-    display: flex;
     align-items: left;
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.search-box-fields label {
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     font-size: 16px;
-    color: #a03939;
+    color: #3e3c3c;
+    line-height: 200%;
 }
 
-
-.search_form_fields input {
+.search-box-fields input {
     width: 100%;
-    padding: 10px; /* Space around text */
+    padding: 10px; 
     border: 1px solid #ccc;
     border-radius: 3px;
-    font-family: 'Arial', sans-serif; /* Change the font to Arial */
-    color:#524f4f;
+    font-family: 'Arial', sans-serif;
+    color:#6a6262;
     font-size: 16px;
 }
 
@@ -145,10 +136,11 @@ body {
     color: white;
     border: none;
     border-radius: 3px;
-    padding: 10px 20px;
+    padding: 10px 25px;
     font-family: 'Arial', sans-serif; /* Change the font to Arial */
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
     margin-top: 10px; /* Add margin to separate the button from the input fields */
+    margin-bottom: 3px;
 }
