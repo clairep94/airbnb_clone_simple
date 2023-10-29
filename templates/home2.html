@@ -4,6 +4,7 @@
     <title>Holiday Homes & Apartment Rentals - Makersbnb</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style_home.css') }}">
     <!-- LOGO FOR AIRBNB -->
+    <!-- CHANGE THIS TO MAKERSBNB -->
     <link rel="icon" href="{{ url_for('static', filename='logos/airbnb-logo.ico') }}" type="image/x-icon"> 
 </head>
 <body>
@@ -15,14 +16,13 @@
     <!-- HEADER - No authentication -->
     <div class="header">
         <div class="logo">
-            <a href="/"><img src="{{ url_for('static', filename='logos/airbnb-logo.png') }}" alt="Airbnb Logo" style="width: auto; height: 40px;"></a>
-            <a href="/"><img src="{{ url_for('static', filename='logos/airbnb.png') }}" alt="Airbnb Logo" style="width: auto; height: 28px;"></a>
+            <a href="/"><img src="{{ url_for('static', filename='logos/makersbnb_full_white.png') }}" alt="Makersbnb Logo" style="width: auto; height: 50px;"></a>
         </div>
 
-        <div class="right-links">
-            <a href="#">Sign Up</a>
-            <a href="#">Login</a>
-            <a href="#">About</a>
+        <div class="links">
+            <a href="/">Sign Up</a>
+            <a href="/login">Login</a>
+            <a href="/about">About</a>
         </div>
         <div class="clear"></div> <!-- Clear the float to prevent overlapping -->
     </div>
@@ -39,38 +39,15 @@
 
             <form class="search_space_form_fields" action="#" method="post"></form>
                 <h1 class="search-box-title">Book unique homes and experiences.</h1>
-
-                
-        
-                <!-- ERROR HANDLING -->
-                {% if availability_errors %}
-                <!-- If so, we show them. -->
-                <p class="t-errors">
-                    There were errors with your available dates: <br>{{ availability_errors }}
-                </p>
-                {% endif %}
-        
         
                 <!-- FORM FIELDS -->
                 <div class="search_form_fields">
-                    <p>
-                        <label for="city">WHERE</label>
-                    </p>
-                    <p>
-                        <input type="text" name="city" id="city">
-                    </p>
-                    <p>
-                        <label for="available_from">CHECK IN</label>
-                    </p>
-                    <p>
-                        <input type="date" name="available_from" id="available_from" min="2023-10-27" max="2024-10-27" >
-                    </p>
-                    <p>
-                        <label for="available_from">CHECK OUT</label>
-                    </p>
-                    <p>
-                        <input type="date" name="available_to" id="available_to" min="2023-10-27" max="2024-10-27" >
-                    </p>
+                    <p><label for="city">WHERE</label></p>
+                    <p><input type="text" name="city" id="city"></p>
+                    <p><label for="available_from">CHECK IN</label></p>
+                    <p><input type="date" name="available_from" id="available_from" min="2023-10-27" max="2024-10-27"></p>
+                    <p><label for="available_from">CHECK OUT</label></p>
+                    <p><input type="date" name="available_to" id="available_to" min="2023-10-27" max="2024-10-27"></p>
                     <p>
                         <label for="guests">GUESTS</label>
                     </p>
